@@ -3,16 +3,15 @@
     Welcome
 {% endblock %}
 {% block css %}
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/bootstrap.min.css') }}" />
+    <link rel="stylesheet" type="text/css"
+    href="{{ url_for('static', filename='vendor/bootstrap.min.css') }}" />
+{% endblock %}
+{% block javascript %}
+    <script data-main="{{ url_for('static', filename='js/main') }}"
+            src="{{url_for('static', filename='vendor/require.js') }}"></script>
 {% endblock %}
 {% block content %}
     <div class="container">
-        <div id="header">
-            Hello
-        </div>
+        <div id="header">Hello</div>
     </div>
-{% endblock %}
-{% block javascript %}
-    <script src="{{ url_for('static', filename='vendor/jquery.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='vendor/riot.min.js') }}"></script>
 {% endblock %}

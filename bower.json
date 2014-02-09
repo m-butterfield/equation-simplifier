@@ -2,8 +2,9 @@
   "name": "Machine",
   "version": "0.0.0",
   "dependencies": {
-    "jquery": "~1.10.0",
     "bootstrap": "~1.3.0",
+    "jquery": "~1.10.0",
+    "requirejs": "~2.1.10",
     "riotjs": "~0.9.8"
   }
 }
