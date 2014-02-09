@@ -4,7 +4,9 @@
 {% endblock %}
 {% block css %}
     <link rel="stylesheet" type="text/css"
-    href="{{ url_for('static', filename='vendor/bootstrap.min.css') }}" />
+          href="{{ url_for('static', filename='vendor/bootstrap.min.css') }}" />
+    <link rel="stylesheet" type="text/css"
+          href="{{ url_for('static', filename='css/machine.css') }}" />
 {% endblock %}
 {% block javascript %}
     <script data-main="{{ url_for('static', filename='js/main') }}"
@@ -12,6 +14,5 @@
 {% endblock %}
 {% block content %}
     <div class="container">
-        <div id="header">Hello</div>
     </div>
 {% endblock %}

@@ -1,6 +1,7 @@
 require.config({
     baseUrl: 'static/js',
     paths: {
+        domReady: '../vendor/domReady',
         jquery: '../vendor/jquery',
         riot: '../vendor/riot'
     },
@@ -10,4 +11,8 @@ require.config({
     urlArgs: "bust=" + Math.floor(Math.random() * 1000000000)
 });
 
-require(['app']);
+require(['domReady', 'jquery', 'riot'], function(domReady, $) {
+    domReady(function() {
+        require(['app']);
+    });
+});

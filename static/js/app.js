@@ -1,3 +1,3 @@
-define(["jquery", "riot"], function($) {
-    console.log('hello');
+define([], function() {
+    debugger;
 });
