@@ -1,1 +1,0 @@
-../../bower_components/riotjs/riot.min.js
