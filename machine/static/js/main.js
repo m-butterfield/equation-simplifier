@@ -1,5 +1,5 @@
 require.config({
-    baseUrl: 'static/js',
+    baseUrl: '/static/js',
     paths: {
         "backbone": '../vendor/backbone',
         "bootstrap": '../vendor/bootstrap',
