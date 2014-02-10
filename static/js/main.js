@@ -1,17 +1,30 @@
 require.config({
     baseUrl: 'static/js',
     paths: {
-        domReady: '../vendor/domReady',
-        jquery: '../vendor/jquery',
-        riot: '../vendor/riot'
+        "backbone": '../vendor/backbone',
+        "bootstrap": '../vendor/bootstrap',
+        "domReady": '../vendor/domReady',
+        "jquery": '../vendor/jquery',
+        "text": '../vendor/text',
+        "underscore": '../vendor/underscore'
     },
     "shim": {
-        "riot": ["jquery"]
+        "backbone": {
+            deps: ["jquery", "underscore"],
+            exports: "Backbone"
+        },
+        "bootstrap": ["jquery"]
     },
     urlArgs: "bust=" + Math.floor(Math.random() * 1000000000)
 });
 
-require(['domReady', 'jquery', 'riot'], function(domReady, $) {
+require([
+    'backbone',
+    'domReady',
+    'jquery',
+    'underscore',
+    'bootstrap'
+], function(Backbone, domReady, $, _) {
     domReady(function() {
         require(['app']);
     });
