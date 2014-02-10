@@ -1,8 +1,13 @@
 define([
+    'models/post',
     'views/post'
-], function(Post) {
-    var Post = new Post({
-        el: $('#post')
+], function(Post, PostView) {
+
+    var post = new Post();
+
+    var postView = new PostView({
+        el: $('#post'),
+        model: post
     });
-    Post.render();
+    postView.render();
 });
