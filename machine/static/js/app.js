@@ -1,13 +1,12 @@
 define([
-    'models/post',
-    'views/post'
-], function(Post, PostView) {
+    'models/expression',
+    'views/simplify_form'
+], function(Expression, SimplifyForm) {
 
-    var post = new Post();
-
-    var postView = new PostView({
-        el: $('#post'),
-        model: post
+    var simplifyForm = new SimplifyForm({
+        el: $("#simplify-form"),
+        model: new Expression()
     });
-    postView.render();
+    simplifyForm.render();
+
 });
