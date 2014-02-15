@@ -1,9 +1,11 @@
-<h3>Enter an expression in the box below and click 'Simplify'</h3>
-<form role="form">
+<h3>Enter an expression in the box below and click <i>Simplify</i></h3>
+<form role="form" id="simplify-form">
   <div class="form-group">
     <input type="text"
-           class="form-control input-lg expression-input"
-           placeholder="Example: x^2 + 2x + 1"
+           id="expression-input"
+           class="form-control input-lg"
+           placeholder="Example: x + x"
+           name="expression-value"
            value="<%= expression %>" />
   </div>
   <button type="submit" class="btn btn-info btn-lg">Simplify</button>

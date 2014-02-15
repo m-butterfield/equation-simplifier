@@ -3,7 +3,8 @@ define([
 ], function(Backbone) {
     var Expression = Backbone.Model.extend({
         defaults: {
-            "expression": ""
+            "expression": "",
+            "result": ""
         }
     });
     return Expression;
