@@ -29,7 +29,10 @@ define([
                         invalid: true
                     });
                 } else {
-                    that.model.set('result', result.simplified_expr);
+                    that.model.set({
+                        result: result.simplified_expr,
+                        invalid: false
+                    });
                 }
             }).fail(function() {
                 alert('error');

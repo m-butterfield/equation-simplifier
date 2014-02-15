@@ -8,4 +8,12 @@ def index():
 @app.route('/simplify')
 def simplify():
     expression = request.args.get('expression', '', type=str)
+
+    print expression
+
+    if not expression:
+        return jsonify(error=True)
+
+
+
     return jsonify(simplified_expr='result: ' + expression)
