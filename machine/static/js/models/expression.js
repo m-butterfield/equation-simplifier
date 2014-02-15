@@ -4,7 +4,8 @@ define([
     var Expression = Backbone.Model.extend({
         defaults: {
             "expression": "",
-            "result": ""
+            "result": "",
+            "invalid": false
         }
     });
     return Expression;

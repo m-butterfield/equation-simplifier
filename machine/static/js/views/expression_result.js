@@ -6,7 +6,7 @@ define([
         template: _.template(template),
 
         initialize: function() {
-            this.listenTo(this.model, "change:result", this.render);
+            this.listenTo(this.model, "change:result change:invalid", this.render);
         },
 
         render: function() {

@@ -15,7 +15,7 @@ define([
             this.getResult();
         },
 
-        getResult: function() {
+        getResult: _.throttle(function() {
             var that = this;
             $.ajax({
                 url: '/simplify',
@@ -24,12 +24,17 @@ define([
                 }
             }).done(function(result) {
                 if (result.error) {
-                    alert('invalid expression');
+                    that.model.set({
+                        result: '',
+                        invalid: true
+                    });
                 } else {
                     that.model.set('result', result.simplified_expr);
                 }
+            }).fail(function() {
+                alert('error');
             });
-        },
+        }, 1000),
 
         render: function() {
             this.$el.html(this.template(this.model.toJSON()));
