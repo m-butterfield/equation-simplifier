@@ -1,4 +1,4 @@
-from machine import app
+from equation_simplifier import app
 from sympy.parsing.sympy_parser import parse_expr,\
     standard_transformations, implicit_multiplication_application
 from flask import render_template, jsonify, request
@@ -24,3 +24,4 @@ def simplify():
     if not result:
         return jsonify(error=True)
     return jsonify(simplified_expr=result)
+
